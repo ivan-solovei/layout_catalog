@@ -1,14 +1,26 @@
 .catalog {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 944px;
-  flex-wrap: wrap;
-  perspective: 400px;
+  margin: 0 auto;
+  gap: 0 48px;
+  grid-template-areas: "one two three four" "five six seven eight";
+}
 
-  &--1 {
-    display: flex;
-    justify-content: space-between;
-    width: 944px;
-    flex-wrap: wrap;
+$cardsList: (
+  "1": one,
+  "2": two,
+  "3": three,
+  "4": four,
+  "5": five,
+  "6": six,
+  "7": seven,
+  "8": eight
+);
+
+@each $number, $order in $cardsList {
+  .product--#{$number} {
+    grid-area: $order;
   }
 }
