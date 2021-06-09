@@ -5,9 +5,9 @@
 @import "./product.scss";
 @import "./stars.scss";
 @import "./cost.scss";
+@import "./box.scss";
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+p,
+body {
+  margin: 0;
 }
